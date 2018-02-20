@@ -61,7 +61,12 @@ class Dribbble extends React.PureComponent<Props, State> {
   }
 
   private renderShot(shot: Shot) {
-    const backgroundImage = `url(${shot.images[this.props.quality] || shot.images.normal})`;
+    let backgroundImage = '';
+    try {
+      backgroundImage = `url(${shot.images[this.props.quality] || shot.images.normal})`;
+    } catch (err) {
+      backgroundImage = '';
+    }
 
     return (
       <a
