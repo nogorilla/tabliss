@@ -1,10 +1,12 @@
 import * as React from 'react';
 import Analogue from './Analogue';
 import Digital from './Digital';
+import DateContainer from './DateContainer';
 
 interface Props {
   hour12: boolean;
   mode: string;
+  date: boolean;
 }
 
 interface State {
@@ -15,6 +17,7 @@ class Time extends React.PureComponent<Props, State> {
   static defaultProps = {
     mode: 'digital',
     hour12: false,
+    date: false
   };
   state: State = {
     time: new Date(),
@@ -34,7 +37,14 @@ class Time extends React.PureComponent<Props, State> {
       return <Analogue time={this.state.time} />;
     }
 
-    return <Digital time={this.state.time} hour12={this.props.hour12} />;
+    return (
+      <div>
+        <Digital time={this.state.time} hour12={this.props.hour12} />
+        {this.props.date === true &&
+          <DateContainer date={this.state.time} />
+        }
+      </div>
+    );
   }
 }
 
