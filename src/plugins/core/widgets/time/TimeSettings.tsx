@@ -4,6 +4,7 @@ import { Settings } from '../../../interfaces';
 interface Props {
   mode: string;
   hour12: boolean;
+  date: boolean;
   onChange: (settings: Settings) => void;
 }
 
@@ -11,6 +12,7 @@ class TimeSettings extends React.PureComponent<Props> {
   static defaultProps = {
     mode: 'digital',
     hour12: false,
+    date: false
   };
 
   render() {
@@ -50,6 +52,17 @@ class TimeSettings extends React.PureComponent<Props> {
           />
           {' '}
           24-hour digital
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            checked={this.props.date}
+            onChange={event => this.props.onChange({
+              date: event.target.checked,
+            })}
+          />
+          {' '}
+          Show date
         </label>
       </div>
     );
