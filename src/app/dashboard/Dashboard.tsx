@@ -4,6 +4,7 @@ import { RootState } from '../../data';
 import Background from './Background';
 import Overlay from './Overlay';
 import Widgets from './Widgets';
+import Links from './Links';
 import './Dashboard.sass';
 
 interface Props {
@@ -20,6 +21,7 @@ const Dashboard: React.StatelessComponent<Props> = (props) => {
       <Background />
       <Widgets />
       <Overlay />
+      <Links />
     </div>
   );
 };

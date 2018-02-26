@@ -2,6 +2,7 @@ import * as React from 'react';
 import Analogue from './Analogue';
 import Digital from './Digital';
 import DateContainer from './DateContainer';
+import './Time.sass';
 
 interface Props {
   hour12: boolean;
@@ -38,7 +39,7 @@ class Time extends React.PureComponent<Props, State> {
     }
 
     return (
-      <div>
+      <div className="Time">
         <Digital time={this.state.time} hour12={this.props.hour12} />
         {this.props.date === true &&
           <DateContainer date={this.state.time} />

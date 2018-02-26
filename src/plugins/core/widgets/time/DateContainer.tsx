@@ -19,7 +19,7 @@ const formattedDay = ({ date }: Props) => {
   return date.toLocaleDateString(undefined, {
     weekday: 'long',
   });
-}
+};
 
 const formattedDate = ({ date }: Props) => {
   // Try full browser support
