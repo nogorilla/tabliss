@@ -39,7 +39,7 @@ class Time extends React.PureComponent<Props, State> {
     }
 
     return (
-      <div className="Time">
+      <div className="TimeContainer">
         <Digital time={this.state.time} hour12={this.props.hour12} />
         {this.props.date === true &&
           <DateContainer date={this.state.time} />
