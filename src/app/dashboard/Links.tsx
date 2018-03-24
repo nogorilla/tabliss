@@ -5,12 +5,12 @@ class Links extends React.PureComponent {
   render() {
     return (
       <div className="Links">
-        <a href="http://reddit.com">reddit</a>
+        <a href="https://reddit.com">reddit</a>
         <a href="https://www.facebook.com">facebook</a>
-        <a href="https://mobile.twitter.com">twitter</a>
+        <a href="https://mobile.twitter.com/home">twitter</a>
         <a href="https://www.instagram.com">instagram</a>
         <a href="https://mail.google.com">gmail</a>
-        <a href="http://feedly.com">feedly</a>
+        <a href="https://feedly.com/i/latest">feedly</a>
         <a href="https://github.com">github</a>
         <a href="https://calendar.google.com/calendar/render#main_7">calendar</a>
         <a href="https://docs.google.com">docs</a>
