@@ -6,7 +6,6 @@ class Links extends React.PureComponent {
     return (
       <div className="Links">
         <a href="https://reddit.com">reddit</a>
-        <a href="https://www.facebook.com">facebook</a>
         <a href="https://mobile.twitter.com/home">twitter</a>
         <a href="https://www.instagram.com">instagram</a>
         <a href="https://mail.google.com">gmail</a>
@@ -19,6 +18,8 @@ class Links extends React.PureComponent {
         <a href="https://github.com/pgalchemy">github - alchemy</a>
         <a href="https://github.com/orgs/pgalchemy/projects/3">olay-project</a>
             <ul>
+                <li><a href="https://github.com/pgalchemy/olay-online-api">olay-online-api</a></li>
+                <li><a href="https://github.com/pgalchemy/olay-online-web">olay-online-web</a></li>
                 <li><a href="https://github.com/pgalchemy/olay-gps-web">olay-gps-web</a></li>
                 <li><a href="https://github.com/pgalchemy/olay-gps-api">olay-gps-api</a></li>
                 <li><a href="https://github.com/pgalchemy/olay-api-serverless">olay-api-serverless</a></li>
