@@ -18,17 +18,17 @@ class Links extends React.PureComponent {
         <a href="https://github.com/pgalchemy">github - alchemy</a>
         <a href="https://github.com/orgs/pgalchemy/projects/3">olay-project</a>
             <ul>
-                <li><a href="https://github.com/pgalchemy/olay-online-api">olay-online-api</a></li>
-                <li><a href="https://github.com/pgalchemy/olay-online-web">olay-online-web</a></li>
-                <li><a href="https://github.com/pgalchemy/olay-gps-web">olay-gps-web</a></li>
-                <li><a href="https://github.com/pgalchemy/olay-gps-api">olay-gps-api</a></li>
-                <li><a href="https://github.com/pgalchemy/olay-api-serverless">olay-api-serverless</a></li>
-                <li><a href="https://github.com/pgalchemy/visage-api-serverless">visage-api-serverless</a></li>
+                <li><a href="https://github.com/pgalchemy/osa-visage-api">osa-visage-api</a></li>
+                <li><a href="https://github.com/pgalchemy/osa-core-api">osa-core-api</a></li>
+                <li><a href="https://github.com/pgalchemy/osa-gateway-api">osa-gateway-api</a></li>
+                <li><a href="https://github.com/pgalchemy/osa-skinadvisor-web">osa-skinadvisor-web</a></li>
+                <li><a href="https://github.com/pgalchemy/osa-web">osa-web</a></li>
             </ul>
         <a href="https://calendar.google.com/calendar/b/1/render#main_7">calendar - alchemy</a>
         <a href="https://drive.google.com/drive/u/1/folders/0ALGRTPywK1LjUk9PVA">drive</a>
         <b>Dev</b>
         <a href="http://localhost:3000">localhost:3000</a>
+        <a href="http://localhost:3030">localhost:3030</a>
         <a href="http://localhost:4200">localhost:4200</a>
         <a href="http://localhost:8000">localhost:8000</a>
         <a href="http://localhost:8080">localhost:8080</a>
