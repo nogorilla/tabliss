@@ -4,6 +4,7 @@ import { useSelector } from '../../store';
 import Background from './Background';
 import Overlay from './Overlay';
 import Widgets from './Widgets';
+import Links from './Links';
 import './Dashboard.sass';
 
 const Dashboard: FC = () => {
@@ -19,6 +20,7 @@ const Dashboard: FC = () => {
       <Background />
       <Overlay />
       <Widgets />
+      <Links />
     </div>
   );
 };
