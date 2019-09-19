@@ -18,14 +18,15 @@ class Links extends React.PureComponent {
         <b>Alchemy</b>
         <a href="https://github.com/pgalchemy">github - alchemy</a>
         <a href="https://github.com/orgs/pgalchemy/projects/3">osa-project</a>
-            <ul>
-                <li><a href="https://github.com/pgalchemy/osa-visage-api">osa-visage-api</a></li>
-                <li><a href="https://github.com/pgalchemy/osa-smart-selfie">osa-smart-selfie</a></li>
-                <li><a href="https://github.com/pgalchemy/osa-core-api">osa-core-api</a></li>
-                <li><a href="https://github.com/pgalchemy/osa-gateway-api">osa-gateway-api</a></li>
-                <li><a href="https://github.com/pgalchemy/osa-skinadvisor-web">osa-skinadvisor-web</a></li>
-                <li><a href="https://github.com/pgalchemy/osa-web">osa-web</a></li>
-            </ul>
+        <ul>
+          <li><a href="https://github.com/pgalchemy/osa-visage-api">osa-visage-api</a></li>
+          <li><a href="https://github.com/pgalchemy/visage-service">visage-service</a></li>
+          <li><a href="https://github.com/pgalchemy/osa-core-api">osa-core-api</a></li>
+          <li><a href="https://github.com/pgalchemy/osa-skinadvisor-web">osa-skinadvisor-web</a></li>
+          <li><a href="https://github.com/pgalchemy/osa-web">osa-web</a></li>
+          <li><a href="https://github.com/pgalchemy/osa-retinol">osa-retinol</a></li>
+          <li><a href="https://github.com/pgalchemy/osa-retinol-web">osa-retinol-web</a></li>
+        </ul>
         <a href="https://calendar.google.com/calendar/b/1/render#main_7">calendar - alchemy</a>
         <a href="https://drive.google.com/drive/u/1/folders/0ALGRTPywK1LjUk9PVA">drive</a>
         <b>Dev</b>
