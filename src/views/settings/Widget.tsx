@@ -4,17 +4,14 @@ import { useDispatch } from 'react-redux';
 import { useToggle } from '../../hooks';
 import { getConfig } from '../../plugins';
 import { setWidgetDisplay } from '../../store/actions';
-import { WidgetDisplay, WidgetState } from '../../store/reducers/types';
-import PluginContainer from '../shared/Plugin';
 import {
-  CollapseIcon,
-  DownIcon,
-  ExpandIcon,
-  IconButton,
-  RemoveIcon,
-  UpIcon,
-} from '../shared';
-import PositionInput from './PositionInput';
+  WidgetDisplay as WidgetDisplayInterface,
+  WidgetState,
+} from '../../store/reducers/types';
+import PluginContainer from '../shared/Plugin';
+import { DownIcon, IconButton, RemoveIcon, UpIcon, Icon } from '../shared';
+import ToggleSection from '../shared/ToggleSection';
+import WidgetDisplay from './WidgetDisplay';
 import './Widget.sass';
 
 interface Props {
@@ -26,13 +23,12 @@ interface Props {
 
 const Widget: FC<Props> = ({ plugin, onMoveDown, onMoveUp, onRemove }) => {
   const [isOpen, toggleIsOpen] = useToggle(onRemove === undefined);
-  const [isFontOpen, toggleIsFontOpen] = useToggle();
 
-  const { name, settingsComponent } = getConfig(plugin.key);
+  const { description, name, settingsComponent } = getConfig(plugin.key);
 
   const dispatch = useDispatch();
   const boundSetDisplay = useCallback(
-    (display: Partial<WidgetDisplay>) =>
+    (display: Partial<WidgetDisplayInterface>) =>
       dispatch(setWidgetDisplay(plugin.id, display)),
     [dispatch, plugin.id],
   );
@@ -40,67 +36,49 @@ const Widget: FC<Props> = ({ plugin, onMoveDown, onMoveUp, onRemove }) => {
   return (
     <fieldset className="Widget">
       <div className="title--buttons">
+        <IconButton onClick={onRemove} title="Remove widget">
+          <RemoveIcon />
+        </IconButton>
+
         <IconButton
           onClick={toggleIsOpen}
           title={`${isOpen ? 'Close' : 'Edit'} widget settings`}
         >
-          {isOpen ? <CollapseIcon /> : <ExpandIcon />}
+          <Icon name="settings" />
         </IconButton>
 
-        {isOpen && (
-          <IconButton onClick={onRemove} title="Remove widget">
-            <RemoveIcon />
-          </IconButton>
-        )}
-
-        {isOpen && onMoveDown && (
+        {onMoveDown && (
           <IconButton onClick={onMoveDown} title="Move widget down">
             <DownIcon />
           </IconButton>
         )}
 
-        {isOpen && onMoveUp && (
+        {onMoveUp && (
           <IconButton onClick={onMoveUp} title="Move widget up">
             <UpIcon />
           </IconButton>
         )}
 
         <h4 onClick={toggleIsOpen}>{name}</h4>
+        {!isOpen && <p>{description}</p>}
       </div>
 
       {isOpen && (
         <div>
-          <PositionInput
-            value={plugin.display.position}
-            onChange={position => boundSetDisplay({ position })}
-          />
-
-          <label>
-            Size
-            <br />
-            <input
-              type="range"
-              value={plugin.display.fontSize}
-              min="2"
-              max="100"
-              step="2"
-              onChange={event =>
-                boundSetDisplay({ fontSize: Number(event.target.value) })
-              }
-            />
-          </label>
-
           {settingsComponent && (
-            <PluginContainer id={plugin.id} component={settingsComponent} />
+            <div className="settings">
+              <PluginContainer id={plugin.id} component={settingsComponent} />
+            </div>
           )}
 
-          <p>
-            <a onClick={toggleIsFontOpen}>
-              {isFontOpen ? 'Close' : 'Edit'} font settings
-            </a>
-          </p>
+          <ToggleSection name="Display Settings">
+            <WidgetDisplay
+              display={plugin.display}
+              onChange={boundSetDisplay}
+            />
+          </ToggleSection>
 
-          {isFontOpen && (
+          <ToggleSection name="Font Settings">
             <>
               <label>
                 Font
@@ -142,7 +120,7 @@ const Widget: FC<Props> = ({ plugin, onMoveDown, onMoveUp, onRemove }) => {
                 />
               </label>
             </>
-          )}
+          </ToggleSection>
         </div>
       )}
     </fieldset>

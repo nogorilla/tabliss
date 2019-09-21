@@ -60,6 +60,9 @@ const System: FC = () => {
           <option value="it" title="Italian">
             Italiano
           </option>
+          <option value="ja" title="Japanese">
+            日本語
+          </option>
           <option value="ko" title="Korean">
             한국어
           </option>
@@ -98,6 +101,12 @@ const System: FC = () => {
           </option>
           <option value="zh-TW" title="Traditional Chinese (Taiwan)">
             中文（台灣）
+          </option>
+          <option value="hi" title="Hindi">
+            हिन्दी
+          </option>
+          <option value="gu" title="Gujarati">
+            ગુજરાતી
           </option>
         </select>
       </label>
