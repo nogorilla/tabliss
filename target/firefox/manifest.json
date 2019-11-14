@@ -1,12 +1,11 @@
 {
   "manifest_version": 2,
-  "name": "Tabliss",
-  "short_name": "Tabliss",
-  "version": "2.0.0",
+  "name": "Tabliss - Custom",
+  "short_name": "Tabliss - Custom",
+  "version": "2.0.0c",
   "description": "A beautiful New Tab page with many customisable backgrounds and widgets that does not require any permissions.",
   "applications": {
     "gecko": {
-      "id": "extension@tabliss.io",
       "strict_min_version": "54.0"
     }
   },
