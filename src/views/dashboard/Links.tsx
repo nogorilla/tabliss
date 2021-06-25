@@ -17,23 +17,10 @@ class Links extends React.PureComponent {
         </a>
         <a href="https://docs.google.com">docs</a>
         <a href="https://sheets.google.com">sheets</a>
-        <b>Alchemy</b>
-        <a href="https://github.com/pgalchemy">github - alchemy</a>
+        <b>ITx</b>
+        <a href="https://github.com/pgdevelopers">github - ITx</a>
         <a href="https://github.com/orgs/procter-gamble/teams/pgssa">pgssa</a>
-        <a href="https://github.com/orgs/procter-gamble/teams/ecaas">eCaaS</a>
-        <ul>
-          <li>
-            <a href="https://github.com/procter-gamble/ecaas-fraud-syndication">
-              fraud-syndication
-            </a>
-          </li>
-        </ul>
-        <a href="https://calendar.google.com/calendar/b/1/render#main_7">
-          calendar - alchemy
-        </a>
-        <a href="https://drive.google.com/drive/u/1/folders/0ALGRTPywK1LjUk9PVA">
-          drive
-        </a>
+        <a href="https://github.com/pgdevelopers/50L-Home">50l_home</a>
         <b>Dev</b>
         <a href="http://localhost:3000">localhost:3000</a>
         <a href="http://localhost:4200">localhost:4200</a>
