@@ -64,8 +64,14 @@ const System: FC = () => {
           <option value="es" title="Spanish">
             Español
           </option>
+          <option value="fa" title="French">
+            پارسی
+          </option>
           <option value="fr" title="French">
             Français
+          </option>
+          <option value="gd" title="Scottish Gaelic">
+            Gàidhlig
           </option>
           <option value="hu" title="Hungarian">
             Magyar
@@ -81,6 +87,9 @@ const System: FC = () => {
           </option>
           <option value="ko" title="Korean">
             한국어
+          </option>
+          <option value="lb" title="Luxembourgish">
+            Lëtzebuergesch
           </option>
           <option value="lt" title="Lithuanian">
             Lietuvių k.
@@ -109,8 +118,17 @@ const System: FC = () => {
           <option value="sk" title="Slovak">
             Slovenčina
           </option>
+          <option value="fi" title="Finnish">
+            Suomi
+          </option>
           <option value="sv" title="Swedish">
             Svenska
+          </option>
+          <option value="ta" title="Tamil">
+            தமிழ்
+          </option>
+          <option value="th" title="Thai">
+            ไทย
           </option>
           <option value="tr" title="Turkish">
             Türkçe
